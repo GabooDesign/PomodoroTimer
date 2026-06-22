@@ -40,6 +40,26 @@ El objetivo es mejorar la concentración y evitar la fatiga mental.
 ## 📜 Licencia
 
 Este proyecto se distribuye bajo la licencia MIT.
+Los audios pertenecen a sus respectivos autores.
+
+## 📜 Audios
+Audios extraidos de las siguientes fuentes:
+https://www.myinstants.com/es/instant/roblox-old-winning-sound-effect-38632/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/check-mark-51857/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/cartoon-bite-38109/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/zvuk-fotoapparata-61186/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/mlg-air-horn/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/rehehehe-76246/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/mario-jump/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/heavenly-musiic-80491/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/womp-womp-womp-55094/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/slap-hard-84097/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/bruh-sound-effect-26614/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/mac-quack-83896/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/man-screaming-aaaah-32768/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/raaar-97328/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/screaming-goat-best/?utm_source=copy&utm_medium=share
+https://www.myinstants.com/es/instant/metal-pipe-falling-sound-effect-7737/?utm_source=copy&utm_medium=share
 
 ---
 

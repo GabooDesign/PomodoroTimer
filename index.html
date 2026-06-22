@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Web</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+
+        <!-- Encabezado -->
+        <header class="hero">
+            <h1>🍅 Pomodoro Web</h1>
+            <p>Enfócate. Trabaja. Descansa. Repite.</p>
+        </header>
+
+        <!-- Aplicación -->
+        <section class="pomodoro">
+
+            <!-- Configuración -->
+            <aside class="settings">
+
+                <div class="card">
+                    <h2>Duraciones</h2>
+
+                    <label>
+                        Trabajo
+                        <input type="number" value="25">
+                    </label>
+
+                    <label>
+                        Descanso corto
+                        <input type="number" value="5">
+                    </label>
+
+                    <label>
+                        Descanso largo
+                        <input type="number" value="15">
+                    </label>
+
+                </div>
+
+                <div class="card">
+                    <h2>Sesión</h2>
+                    <span class="session-counter">1 / 4</span>
+                    <p>Pomodoros completados</p>
+                </div>
+
+            </aside>
+
+            <!-- Temporizador -->
+            <section class="timer">
+
+                <div class="timer-circle">
+
+    <svg class="progress-ring">
+
+        <circle
+            class="progress-ring-bg"
+            cx="210"
+            cy="210"
+            r="180">
+        </circle>
+
+        <circle
+            class="progress-ring-fill"
+            cx="210"
+            cy="210"
+            r="180">
+        </circle>
+
+    </svg>
+
+    <div class="timer-content">
+
+        <span class="emoji">🍅</span>
+        <h2>Trabajo</h2>
+        <h3 id="time">25:00</h3>
+        <p>Prepárate para enfocarte</p>
+
+    </div>
+
+</div>
+
+                <div class="controls">
+                    <button id="resetBtn">↺ Reiniciar</button>
+                    <button id="startBtn" class="primary">▶ Iniciar</button>
+                    <button id="pauseBtn">⏸ Pausar</button>
+                </div>
+
+            </section>
+
+            <!-- Panel lateral -->
+            <aside class="stats">
+
+                <div class="card motivation">
+                    <span>🍅</span>
+                    <h2>La concentración es tu superpoder.</h2>
+                    <p>Un Pomodoro a la vez. <br> Sin celular, eres más productivo</p>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+</body>
+
+<script>
+// ==========================
+// ELEMENTOS
+// ==========================
+
+const timeDisplay = document.getElementById("time");
+
+const startBtn = document.getElementById("startBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+const resetBtn = document.getElementById("resetBtn");
+
+const modeTitle = document.querySelector(".timer-content h2");
+const message = document.querySelector(".timer-content p");
+
+const inputs = document.querySelectorAll(".settings input");
+
+const workInput = inputs[0];
+const breakInput = inputs[1];
+const longBreakInput = inputs[2];
+
+const sessionCounter = document.querySelector(".session-counter");
+
+const progressCircle =
+    document.querySelector(".progress-ring-fill");
+
+// ==========================
+// VARIABLES
+// ==========================
+
+let workTime = 25 * 60;
+let breakTime = 5 * 60;
+let longBreakTime = 15 * 60;
+
+let timeLeft = workTime;
+
+let timer = null;
+let isRunning = false;
+let isWorkSession = true;
+
+let completedPomodoros = 0;
+
+let currentDuration = workTime;
+
+// ==========================
+// SONIDOS
+// ==========================
+
+const sounds = [
+    "sounds/bruh-sound-effect_WstdzdM.mp3",
+    "sounds/cartoon_bite_sound_effect.mp3",
+    "sounds/check-mark_oPG7Xo5.mp3",
+    "sounds/downer_noise.mp3",
+    "sounds/heavenly-music-gaming-sound-effect-hd-mp3cut.mp3",
+    "sounds/mac-quack.mp3",
+    "sounds/man-screaming-aaaah.mp3",
+    "sounds/maro-jump-sound-effect_1.mp3",
+    "sounds/metal-pipe-falling-sound-effect.mp3",
+    "sounds/mlg-airhorn.mp3",
+    "sounds/raaar_FerSY7o.mp3",
+    "sounds/rehehehe.mp3",
+    "sounds/roblox-old-winning-sound-effect.mp3",
+    "sounds/screaming-goat.mp3",
+    "sounds/slap-soundmaster13-49669815_4L20wGP.mp3",
+    "sounds/zvuk-fotoapparata.mp3"
+];
+
+// ==========================
+// SVG PROGRESS
+// ==========================
+
+const radius = 180;
+
+const circumference =
+    2 * Math.PI * radius;
+
+progressCircle.style.strokeDasharray =
+    circumference;
+
+progressCircle.style.strokeDashoffset =
+    0;
+
+// ==========================
+// CONFIG
+// ==========================
+
+function loadSettings() {
+
+    workTime = Number(workInput.value) * 60;
+    breakTime = Number(breakInput.value) * 60;
+    longBreakTime = Number(longBreakInput.value) * 60;
+
+}
+
+// ==========================
+// TIEMPO
+// ==========================
+
+function updateDisplay() {
+
+    const minutes =
+        Math.floor(timeLeft / 60);
+
+    const seconds =
+        timeLeft % 60;
+
+    timeDisplay.textContent =
+        `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+}
+
+// ==========================
+// PROGRESO CIRCULAR
+// ==========================
+
+function updateProgress() {
+
+    const percent =
+        timeLeft / currentDuration;
+
+    const offset =
+        circumference * (1 - percent);
+
+    progressCircle.style.strokeDashoffset =
+        offset;
+
+}
+
+// ==========================
+// SONIDO
+// ==========================
+
+function playRandomSound() {
+
+    const randomIndex =
+        Math.floor(
+            Math.random() * sounds.length
+        );
+
+    const audio =
+        new Audio(
+            sounds[randomIndex]
+        );
+
+    audio.volume = 0.5;
+
+    audio.play();
+
+}
+
+// ==========================
+// INICIAR
+// ==========================
+
+function startTimer() {
+
+    if (isRunning) return;
+
+    loadSettings();
+
+    isRunning = true;
+
+    timer = setInterval(() => {
+
+        timeLeft--;
+
+        updateDisplay();
+        updateProgress();
+
+        if (timeLeft <= 0) {
+
+            clearInterval(timer);
+
+            isRunning = false;
+
+            playRandomSound();
+
+            switchMode();
+
+        }
+
+    }, 1000);
+
+}
+
+// ==========================
+// PAUSAR
+// ==========================
+
+function pauseTimer() {
+
+    clearInterval(timer);
+
+    isRunning = false;
+
+}
+
+// ==========================
+// REINICIAR
+// ==========================
+
+function resetTimer() {
+
+    pauseTimer();
+
+    loadSettings();
+
+    if (isWorkSession) {
+
+        currentDuration = workTime;
+        timeLeft = workTime;
+
+    } else {
+
+        currentDuration = breakTime;
+        timeLeft = breakTime;
+
+    }
+
+    updateDisplay();
+    updateProgress();
+
+}
+
+// ==========================
+// CAMBIO DE MODO
+// ==========================
+
+function switchMode() {
+
+    loadSettings();
+
+    if (isWorkSession) {
+
+        completedPomodoros++;
+
+        sessionCounter.textContent =
+            `${(completedPomodoros % 4) + 1} / 4`;
+
+        isWorkSession = false;
+
+        // Descanso largo
+        if (completedPomodoros % 4 === 0) {
+
+            currentDuration =
+                longBreakTime;
+
+            timeLeft =
+                longBreakTime;
+
+            progressCircle.style.stroke =
+                "#2196F3";
+
+            modeTitle.textContent =
+                "Descanso largo";
+
+            message.textContent =
+                "Te ganaste un descanso largo 😎";
+
+        }
+        else {
+
+            currentDuration =
+                breakTime;
+
+            timeLeft =
+                breakTime;
+
+            progressCircle.style.stroke =
+                "#4CAF50";
+
+            modeTitle.textContent =
+                "Descanso";
+
+            message.textContent =
+                "Tómate un respiro ☕";
+
+        }
+
+    }
+    else {
+
+        isWorkSession = true;
+
+        currentDuration =
+            workTime;
+
+        timeLeft =
+            workTime;
+
+        progressCircle.style.stroke =
+            "#E94F37";
+
+        modeTitle.textContent =
+            "Trabajo";
+
+        message.textContent =
+            "Prepárate para enfocarte 🚀";
+
+    }
+
+    updateDisplay();
+    updateProgress();
+
+    startTimer();
+
+}
+
+// ==========================
+// EVENTOS
+// ==========================
+
+startBtn.addEventListener(
+    "click",
+    startTimer
+);
+
+pauseBtn.addEventListener(
+    "click",
+    pauseTimer
+);
+
+resetBtn.addEventListener(
+    "click",
+    resetTimer
+);
+
+// ==========================
+// SALIR DEL SITIO
+// ==========================
+
+window.addEventListener(
+    "beforeunload",
+    (event) => {
+
+        if (isRunning) {
+
+            event.preventDefault();
+
+            event.returnValue = "";
+
+        }
+
+    }
+);
+
+// ==========================
+// INICIO
+// ==========================
+
+loadSettings();
+
+currentDuration =
+    workTime;
+
+timeLeft =
+    workTime;
+
+progressCircle.style.stroke =
+    "#E94F37";
+
+updateDisplay();
+updateProgress();
+</script>
+
+<script>
+    window.addEventListener("beforeunload", (event) => {
+
+    if(isRunning){
+
+        event.preventDefault();
+
+        event.returnValue = "";
+
+    }
+
+});
+</script>
+
+</html>
