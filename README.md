@@ -37,29 +37,31 @@ Consiste en:
 
 El objetivo es mejorar la concentración y evitar la fatiga mental.
 
-## 📜 Licencia
+## 📜 Desarrollo
 
-Este proyecto se distribuye bajo la licencia MIT.
-Los audios pertenecen a sus respectivos autores.
+Esta aplicación nació como una herramienta personal para organizar mejor mis sesiones de estudio y trabajo. Buscando una forma simple de mantener la concentración y evitar el desorden en mis tareas diarias, decidí desarrollar mi propia versión de un temporizador Pomodoro utilizando HTML, CSS y JavaScript.
+
+Además, incorporé un sistema de sonidos aleatorios al finalizar cada sesión, agregando un elemento de sorpresa que ayuda a romper la monotonía y hace más entretenida la experiencia de uso.
 
 ## 📜 Audios
-Audios extraidos de las siguientes fuentes:
-https://www.myinstants.com/es/instant/roblox-old-winning-sound-effect-38632/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/check-mark-51857/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/cartoon-bite-38109/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/zvuk-fotoapparata-61186/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/mlg-air-horn/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/rehehehe-76246/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/mario-jump/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/heavenly-musiic-80491/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/womp-womp-womp-55094/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/slap-hard-84097/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/bruh-sound-effect-26614/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/mac-quack-83896/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/man-screaming-aaaah-32768/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/raaar-97328/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/screaming-goat-best/?utm_source=copy&utm_medium=share
-https://www.myinstants.com/es/instant/metal-pipe-falling-sound-effect-7737/?utm_source=copy&utm_medium=share
+Audios extraidos de las siguientes fuentes:  
+
+- [Roblox Old Winning Sound Effect](https://www.myinstants.com/es/instant/roblox-old-winning-sound-effect-38632/?utm_source=copy&utm_medium=share)
+- [Check Mark](https://www.myinstants.com/es/instant/check-mark-51857/?utm_source=copy&utm_medium=share)
+- [Cartoon Bite](https://www.myinstants.com/es/instant/cartoon-bite-38109/?utm_source=copy&utm_medium=share)
+- [Zvuk Fotoapparata](https://www.myinstants.com/es/instant/zvuk-fotoapparata-61186/?utm_source=copy&utm_medium=share)
+- [MLG Air Horn](https://www.myinstants.com/es/instant/mlg-air-horn/?utm_source=copy&utm_medium=share)
+- [Rehehehe](https://www.myinstants.com/es/instant/rehehehe-76246/?utm_source=copy&utm_medium=share)
+- [Mario Jump](https://www.myinstants.com/es/instant/mario-jump/?utm_source=copy&utm_medium=share)
+- [Heavenly Musiic](https://www.myinstants.com/es/instant/heavenly-musiic-80491/?utm_source=copy&utm_medium=share)
+- [Womp Womp Womp](https://www.myinstants.com/es/instant/womp-womp-womp-55094/?utm_source=copy&utm_medium=share)
+- [Slap Hard](https://www.myinstants.com/es/instant/slap-hard-84097/?utm_source=copy&utm_medium=share)
+- [Bruh Sound Effect](https://www.myinstants.com/es/instant/bruh-sound-effect-26614/?utm_source=copy&utm_medium=share)
+- [Mac Quack](https://www.myinstants.com/es/instant/mac-quack-83896/?utm_source=copy&utm_medium=share)
+- [Man Screaming AAAAH](https://www.myinstants.com/es/instant/man-screaming-aaaah-32768/?utm_source=copy&utm_medium=share)
+- [RAAAR](https://www.myinstants.com/es/instant/raaar-97328/?utm_source=copy&utm_medium=share)
+- [Screaming Goat Best](https://www.myinstants.com/es/instant/screaming-goat-best/?utm_source=copy&utm_medium=share)
+- [Metal Pipe Falling Sound Effect](https://www.myinstants.com/es/instant/metal-pipe-falling-sound-effect-7737/?utm_source=copy&utm_medium=share)
 
 ---
 
@@ -67,7 +69,12 @@ _"25 minutos de concentración son mejores que 3 horas mirando el celular."_
 
 ---
 
+## 📜 Licencia
+
+Este proyecto se distribuye bajo la licencia MIT.
+Los audios pertenecen a sus respectivos autores.
+
 ## 👨‍💻 Autor
 
-Desarrollado por Gabriel Castillo.
-
+Desarrollado por Gabriel Castillo.  
+GitHub: https://github.com/GabooDesign
