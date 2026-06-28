@@ -46,22 +46,25 @@ Además, incorporé un sistema de sonidos aleatorios al finalizar cada sesión, 
 ## 📜 Audios
 Audios extraidos de las siguientes fuentes:  
 
-- [Roblox Old Winning Sound Effect](https://www.myinstants.com/es/instant/roblox-old-winning-sound-effect-38632/?utm_source=copy&utm_medium=share)
-- [Check Mark](https://www.myinstants.com/es/instant/check-mark-51857/?utm_source=copy&utm_medium=share)
-- [Cartoon Bite](https://www.myinstants.com/es/instant/cartoon-bite-38109/?utm_source=copy&utm_medium=share)
-- [Zvuk Fotoapparata](https://www.myinstants.com/es/instant/zvuk-fotoapparata-61186/?utm_source=copy&utm_medium=share)
-- [MLG Air Horn](https://www.myinstants.com/es/instant/mlg-air-horn/?utm_source=copy&utm_medium=share)
-- [Rehehehe](https://www.myinstants.com/es/instant/rehehehe-76246/?utm_source=copy&utm_medium=share)
-- [Mario Jump](https://www.myinstants.com/es/instant/mario-jump/?utm_source=copy&utm_medium=share)
-- [Heavenly Musiic](https://www.myinstants.com/es/instant/heavenly-musiic-80491/?utm_source=copy&utm_medium=share)
-- [Womp Womp Womp](https://www.myinstants.com/es/instant/womp-womp-womp-55094/?utm_source=copy&utm_medium=share)
-- [Slap Hard](https://www.myinstants.com/es/instant/slap-hard-84097/?utm_source=copy&utm_medium=share)
-- [Bruh Sound Effect](https://www.myinstants.com/es/instant/bruh-sound-effect-26614/?utm_source=copy&utm_medium=share)
-- [Mac Quack](https://www.myinstants.com/es/instant/mac-quack-83896/?utm_source=copy&utm_medium=share)
-- [Man Screaming AAAAH](https://www.myinstants.com/es/instant/man-screaming-aaaah-32768/?utm_source=copy&utm_medium=share)
-- [RAAAR](https://www.myinstants.com/es/instant/raaar-97328/?utm_source=copy&utm_medium=share)
-- [Screaming Goat Best](https://www.myinstants.com/es/instant/screaming-goat-best/?utm_source=copy&utm_medium=share)
-- [Metal Pipe Falling Sound Effect](https://www.myinstants.com/es/instant/metal-pipe-falling-sound-effect-7737/?utm_source=copy&utm_medium=share)
+- [Roblox Old Winning Sound Effect](https://www.myinstants.com/es/instant/roblox-old-winning-sound-effect-38632/)
+- [Check Mark](https://www.myinstants.com/es/instant/check-mark-51857/)
+- [Cartoon Bite](https://www.myinstants.com/es/instant/cartoon-bite-38109/)
+- [Zvuk Fotoapparata](https://www.myinstants.com/es/instant/zvuk-fotoapparata-61186/)
+- [MLG Air Horn](https://www.myinstants.com/es/instant/mlg-air-horn/)
+- [Rehehehe](https://www.myinstants.com/es/instant/rehehehe-76246/)
+- [Mario Jump](https://www.myinstants.com/es/instant/mario-jump/)
+- [Heavenly Musiic](https://www.myinstants.com/es/instant/heavenly-musiic-80491/)
+- [Womp Womp Womp](https://www.myinstants.com/es/instant/womp-womp-womp-55094/)
+- [Slap Hard](https://www.myinstants.com/es/instant/slap-hard-84097/)
+- [Bruh Sound Effect](https://www.myinstants.com/es/instant/bruh-sound-effect-26614/)
+- [Mac Quack](https://www.myinstants.com/es/instant/mac-quack-83896/)
+- [Man Screaming AAAAH](https://www.myinstants.com/es/instant/man-screaming-aaaah-32768/)
+- [RAAAR](https://www.myinstants.com/es/instant/raaar-97328/)
+- [Screaming Goat Best](https://www.myinstants.com/es/instant/screaming-goat-best/)
+- [Metal Pipe Falling Sound Effect](https://www.myinstants.com/es/instant/metal-pipe-falling-sound-effect-7737/)
+- [Pikmin!](https://www.myinstants.com/en/instant/pikmin-69773/)
+- [Pikmin clock](https://www.myinstants.com/en/instant/pikmin-clock-98746/)
+
 
 ---
 
